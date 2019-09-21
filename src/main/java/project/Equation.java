@@ -18,6 +18,26 @@ public class Equation extends Polynom {
         super(list);
     } 
 
+    Equation(ArrayList<Fraction> left, ArrayList<Fraction> right) {
+        this(substract(left, right));
+    }
+
+    
+    Equation(Polynom polynom) {
+        fractions = polynom.fractions;
+    }
+
+    Equation(Polynom left, Polynom right) {
+        this(left.fractions, right.fractions);
+    }
+
+    private static ArrayList<Fraction> substract(ArrayList<Fraction> left, ArrayList<Fraction> right) {
+        for (int i = 0; i < right.size(); i++) {
+        left.set(left.size() - 1 - i, left.get(left.size() - 1 - i).subtract(right.get(right.size() - 1 - i)));
+        }
+        return left;
+    }
+
     /**
      * Checks if specified Fraction is root of this Equation
      * @param fraction - Fraction which is to checked if it's root
