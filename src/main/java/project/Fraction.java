@@ -123,11 +123,11 @@ public class Fraction {
     }
 
     public Fraction subtract(Fraction fraction) {
-        Fraction other = new Fraction();
-        other.num = this.num * fraction.denom - fraction.num * this.denom;
-        other.denom = Math.abs(this.denom * fraction.denom);
-        other.cut();
-        return other;
+        Fraction res = new Fraction();
+        res.num = this.num * fraction.denom - fraction.num * this.denom;
+        res.denom = Math.abs(this.denom * fraction.denom);
+        res.cut();
+        return res;
     }
 
     public Fraction devide(Fraction fraction) throws Exception {
