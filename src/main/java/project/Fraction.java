@@ -122,7 +122,18 @@ public class Fraction {
         return fraction;
     }
 
-    
+    public Fraction subtract(Fraction fraction) {
+        Fraction res = new Fraction();
+        res.num = this.num * fraction.denom - fraction.num * this.denom;
+        res.denom = Math.abs(this.denom * fraction.denom);
+        res.cut();
+        return res;
+    }
+
+    public Fraction devide(Fraction fraction) throws Exception {
+        Fraction other = new Fraction(fraction.denom, fraction.num);
+        return this.multiply(other);
+    }
 
     /**
      * Returns the String representation of this Fraction
