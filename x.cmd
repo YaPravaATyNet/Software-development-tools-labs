@@ -1,0 +1,1 @@
+C:\"Program Files"\Java\jdk-10.0.2\bin\javadoc -d c:\Users\User\Documents\Бред униерситетский\Инструментальные средства разработки ПО\lab1\javadoc -sourcepath c:\Users\User\Documents\Бред униерситетский\Инструментальные средства разработки ПО\lab1\src -subpackages main, test 
