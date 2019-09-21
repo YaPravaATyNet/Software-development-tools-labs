@@ -131,8 +131,8 @@ public class Fraction {
     }
 
     public Fraction devide(Fraction fraction) throws Exception {
-        Fraction res = new Fraction(fraction.denom, fraction.num);
-        return this.multiply(res);
+        Fraction other = new Fraction(fraction.denom, fraction.num);
+        return this.multiply(other);
     }
 
     /**
