@@ -130,6 +130,11 @@ public class Fraction {
         return res;
     }
 
+    public Fraction devide(Fraction fraction) throws Exception {
+        Fraction res = new Fraction(fraction.denom, fraction.num);
+        return this.multiply(res);
+    }
+
     /**
      * Returns the String representation of this Fraction
      * @return the String representation of this Fraction
